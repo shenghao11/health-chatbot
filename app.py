@@ -26,7 +26,7 @@ def main():
 
     # The title and greeting message of the Streamlit application
     st.title("Health Chatbot")
-    st.write("Hello! I'm your friendly chatbot. You can ask me anything about health.")
+    st.write("Hello! I'm your friendly chatbot. You can ask me any health related question!")
     
     system_prompt = "Respond concisely with health-oriented advice, and limit the output to 500 characters."
     model = 'llama3-8b-8192'
