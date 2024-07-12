@@ -24,7 +24,9 @@ def main():
     st.markdown(hide_streamlit_style, unsafe_allow_html=True)
     
     # Get Groq API key
-    groq_api_key = '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'
+    #groq_api_key ='api_key'
+    groq_api_key=st.secrets['API_TOKEN']
+
     
     # The title and greeting message of the Streamlit application
     st.title("Health Chatbot")
