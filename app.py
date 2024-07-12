@@ -1,7 +1,4 @@
 import streamlit as st
-import os
-from groq import Groq
-
 from langchain.chains import LLMChain
 from langchain_core.prompts import (
     ChatPromptTemplate,
@@ -12,21 +9,28 @@ from langchain_core.messages import SystemMessage
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 from langchain_groq import ChatGroq
 
-
 def main():
     """
     This function is the main entry point of the application. It sets up the Groq client, the Streamlit interface, and handles the chat interaction.
     """
     
+    # Custom CSS to hide Streamlit menu and watermark
+    hide_streamlit_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        </style>
+    """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+    
     # Get Groq API key
     #groq_api_key ='api_key'
     groq_api_key=st.secrets['API_TOKEN']
 
-
-
+    
     # The title and greeting message of the Streamlit application
     st.title("Health Chatbot")
-    st.write("Hello! I'm your friendly chatbot. You can ask me anything about health.")
+    st.write("Hello! I'm your friendly chatbot. You can ask me any health related question!")
     
     system_prompt = "Respond concisely with health-oriented advice, and limit the output to 500 characters."
     model = 'llama3-8b-8192'
@@ -87,3 +91,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
