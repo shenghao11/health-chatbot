@@ -27,7 +27,6 @@ def main():
     #groq_api_key ='api_key'
     groq_api_key=st.secrets['API_TOKEN']
 
-    
     # The title and greeting message of the Streamlit application
     st.title("Health Chatbot")
     st.write("Hello! I'm your friendly chatbot. You can ask me any health related question!")
@@ -91,4 +90,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
