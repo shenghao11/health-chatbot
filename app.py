@@ -12,7 +12,9 @@ from langchain_groq import ChatGroq
 # Hide Streamlit footer and menu
 hide_streamlit_style = """
             <style>
-            footer {visibility: hidden !important;}
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
