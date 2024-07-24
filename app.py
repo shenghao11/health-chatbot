@@ -9,20 +9,12 @@ from langchain_core.messages import SystemMessage
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 from langchain_groq import ChatGroq
 
-# Hide Streamlit footer and hamburger menu
+# Hide Streamlit footer and menu
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
-            footer:after {
-                content:'';
-                visibility: visible;
-                display: block;
-                position: relative;
-                #background-color: white;
-                padding: 5px;
-                top: 2px;
-            }
+            header {visibility: hidden;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
