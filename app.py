@@ -9,12 +9,20 @@ from langchain_core.messages import SystemMessage
 from langchain.chains.conversation.memory import ConversationBufferWindowMemory
 from langchain_groq import ChatGroq
 
-# Custom CSS to hide Streamlit menu and watermark
+# Hide Streamlit footer and hamburger menu
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
-            body {background-color: #f0f0f0;}
+            footer:after {
+                content:'';
+                visibility: visible;
+                display: block;
+                position: relative;
+                #background-color: white;
+                padding: 5px;
+                top: 2px;
+            }
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
@@ -25,8 +33,8 @@ def main():
     """
     
     # Get Groq API key
-    #groq_api_key = st.secrets['API_TOKEN']
-    
+    groq_api_key = st.secrets['API_TOKEN']
+
     # The title and greeting message of the Streamlit application
     st.title("Health Chatbot")
     st.write("Hello! I'm your friendly chatbot. You can ask me any health related question!")
@@ -90,7 +98,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 
 
