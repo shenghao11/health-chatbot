@@ -26,7 +26,7 @@ def main():
     
     # Get Groq API key
     #groq_api_key ='api_key'
-    groq_api_key=st.secrets['API_TOKEN']
+    
     
     # The title and greeting message of the Streamlit application
     st.title("Health Chatbot")
