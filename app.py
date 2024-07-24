@@ -16,12 +16,13 @@ def main():
     
     # Custom CSS to hide Streamlit menu and watermark
     hide_streamlit_style = """
-        <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        </style>
-    """
-    st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+                <style>
+                #MainMenu {visibility: hidden;}
+                footer {visibility: hidden;}
+                </style>
+                """
+    st.markdown(hide_streamlit_style, unsafe_allow_html=True)   
+    
     
     # Get Groq API key
     #groq_api_key ='api_key'
