@@ -13,7 +13,7 @@ from langchain_groq import ChatGroq
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
+            footer {visibility: hidden !important;}
             header {visibility: hidden;}
             </style>
             """
