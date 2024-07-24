@@ -12,7 +12,6 @@ from langchain_groq import ChatGroq
 # Hide Streamlit footer and menu
 hide_streamlit_style = """
             <style>
-            [data-testid="stToolbar"] {visibility: hidden !important;}
             footer {visibility: hidden !important;}
             </style>
             """
