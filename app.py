@@ -16,16 +16,15 @@ hide_streamlit_style = """
             footer {visibility: hidden;}
             </style>
             """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)   
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 def main():
     """
     This function is the main entry point of the application. It sets up the Groq client, the Streamlit interface, and handles the chat interaction.
-    """    
+    """
     
     # Get Groq API key
-    #groq_api_key ='api_key'
-    groq_api_key=st.secrets['API_TOKEN']
+    #groq_api_key = st.secrets['API_TOKEN']
     
     # The title and greeting message of the Streamlit application
     st.title("Health Chatbot")
@@ -90,6 +89,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
